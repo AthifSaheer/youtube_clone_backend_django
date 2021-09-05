@@ -1,7 +1,6 @@
 from .models import ResolutionVideos, UploadVideo
 import moviepy.editor as mp
 
-from moviepy.video.io.ffmpeg_reader import FFMPEG_VideoReader
 import base64
 import io
 

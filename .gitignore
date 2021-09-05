@@ -1,0 +1,15 @@
+env
+media
+__pycache__
+db.sqlite3
+
+user/migrations
+studio/migrations
+admin_panel/migrations
+
+user/__pycache__
+studio/__pycache__
+admin_panel/__pycache__
+
+
+

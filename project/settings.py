@@ -85,8 +85,8 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 'DIRS': [os.path.join(BASE_DIR, '../frontend/build')],
-        'DIRS': [os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Frontend/build')],
+        'DIRS': [os.path.join(BASE_DIR, '../frontend/build')],
+        # 'DIRS': [os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Frontend/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -164,11 +164,11 @@ USE_TZ = False
 # 👋 LOCAL HOST COMMENT YouTube_Clone_SPS_Fronten LINE AND UNCOMMENT ../frontend/build LINE
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, '../frontend/build/static')]
-STATICFILES_DIRS = [os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Fronten/build/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '../frontend/build/static')]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Fronten/build/static')]
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, '../frontend/build/static/media/')
-MEDIA_ROOT = os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Fronten/build/static/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, '../frontend/build/static/media/')
+# MEDIA_ROOT = os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Fronten/build/static/media/')
 MEDIA_URL = '/media/'
 
 # Default primary key field type

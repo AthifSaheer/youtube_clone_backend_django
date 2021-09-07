@@ -80,10 +80,13 @@ JWT_AUTH = {
 
 ROOT_URLCONF = 'project.urls'
 
+# 👋 LOCAL HOST COMMENT YouTube_Clone_SPS_Fronten LINE AND UNCOMMENT ../frontend/build LINE
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, '../frontend/build')],
+        # 'DIRS': [os.path.join(BASE_DIR, '../frontend/build')],
+        'DIRS': [os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Frontend/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,23 +105,25 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+# 👋 LOCAL HOST COMMENT POSTGRESQLDB AND UNCOMMENT SQLITE3
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'youtubeclone',
-        'USER': 'youtubeclone',
-        'PASSWORD': 'youtubeclone',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'youtubeclone',
+#         'USER': 'youtubeclone',
+#         'PASSWORD': 'youtubeclone',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -156,10 +161,14 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, '../frontend/build/static')]
+# 👋 LOCAL HOST COMMENT YouTube_Clone_SPS_Fronten LINE AND UNCOMMENT ../frontend/build LINE
 
-MEDIA_ROOT = os.path.join(BASE_DIR, '../frontend/build/static/media/')
+STATIC_URL = '/static/'
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, '../frontend/build/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Fronten/build/static')]
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, '../frontend/build/static/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Fronten/build/static/media/')
 MEDIA_URL = '/media/'
 
 # Default primary key field type
@@ -170,8 +179,11 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': "%d %m %Y", # %H:%M:%S
 }
 
-AWS_ACCESS_KEY_ID = 'AKIASWEA2ES4KBLJRDMP'
-AWS_SECRET_ACCESS_KEY = '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'
+from .private import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+
+AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY
+
 AWS_STORAGE_BUCKET_NAME = 'youtubeclones3'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 

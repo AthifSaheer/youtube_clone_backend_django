@@ -57,7 +57,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'http://youtube.athifsaheer.online',
 ]
 # CORS_ORIGIN_ALLOW_ALL = True
 

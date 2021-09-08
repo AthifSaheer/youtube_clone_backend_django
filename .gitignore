@@ -1,7 +1,7 @@
 env
 media
 # __pycache__
-# db.sqlite3
+db.sqlite3
 
 # user/migrations
 # studio/migrations
@@ -11,5 +11,5 @@ media
 # studio/__pycache__
 # admin_panel/__pycache__
 
-/project/private.py
+project/private.py
 

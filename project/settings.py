@@ -56,11 +56,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    'https://youtube.athifsaheer.online',
-    'http://15.206.68.201',
-]
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:3000',
+#     'https://youtube.athifsaheer.online',
+#     'http://15.206.68.201',
+# ]
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 
@@ -166,7 +167,8 @@ USE_TZ = False
 # 👋 LOCAL HOST COMMENT YouTube_Clone_SPS_Fronten LINE AND UNCOMMENT ../frontend/build LINE
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, '../frontend/build/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, '../frontend/build/static')
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, '../YouTube_Clone_SPS_Fronten/build/static')]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '../frontend/build/static/media/')

@@ -61,8 +61,9 @@ MIDDLEWARE = [
 #     'https://youtube.athifsaheer.online',
 #     'http://15.206.68.201',
 # ]
+CORS_ORIGIN_WHITELIST = ['https://youtube.athifsaheer.online']
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 
 
 # REST_FRAMEWORK = {

@@ -66,7 +66,7 @@ CORS_ALLOWED_ORIGINS = [
     'https://youtube.athifsaheer.online'
 ]
 
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_HEADERS = [
     "accept",
